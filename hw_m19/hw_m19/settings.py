@@ -56,7 +56,7 @@ ROOT_URLCONF = 'hw_m19.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates/first_task'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
