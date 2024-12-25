@@ -3,12 +3,12 @@
 {% block menu %}{{ block.super }}{% endblock %}
 {% block content %}
     <hr>
-    {% for new in page_obj %}
-        <h2>{{ new.title }}</h2>
+    {% for review in page_obj %}
+        <h2>{{ review.title }}</h2>
         <br>
-        {{ new.content }}
+        {{ review.content }}
         <br>
-        <small style="float: right; margin-right: 20px;">{{ new.date }}</small>
+        <small style="float: right; margin-right: 20px;">{{ review.date }}</small>
         <hr>
     {% endfor %}
 

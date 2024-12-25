@@ -115,7 +115,7 @@ def faq(request):
 
 
 def review(request):
-    review = FAQ.objects.all().order_by('-date')
+    review = Review.objects.all().order_by('-date')
     paginator = Paginator(review, 1)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
