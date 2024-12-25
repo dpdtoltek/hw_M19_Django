@@ -104,3 +104,19 @@ def news(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'news.html', {'page_obj': page_obj})
+
+
+def faq(request):
+    faq = FAQ.objects.all().order_by('-date')
+    paginator = Paginator(faq, 1)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'faq.html', {'page_obj': page_obj})
+
+
+def review(request):
+    review = FAQ.objects.all().order_by('-date')
+    paginator = Paginator(review, 1)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'review.html', {'page_obj': page_obj})
